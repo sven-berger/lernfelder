@@ -1,22 +1,32 @@
-<?php require_once("includes/header.php"); ?>
-    <?php
-    // Standardseite setzen
-    $page = $_GET['page'] ?? '';
+<?php require_once("assets/header.php"); ?>
 
-    // Falls keine Seite gesetzt ist, auf index.php?page=index umleiten
-    if ($page === '') {
-        header("Location: index.php?page=index");
-        exit();
-    }
+<?php
+$page = $_GET['page'] ?? 'index';
+$filePath = __DIR__ . "/libary/{$page}.lib.php";
 
-    // Pfad zur Datei
-    $filePath = "lib/" . $page . ".lib.php";
-
-    // Datei einbinden, wenn sie existiert
-    if (file_exists($filePath)) {
-        include $filePath;
+ob_start();
+if (is_file($filePath)) {
+    // Eine Seite kann am Anfang $page_full = true setzen, um den Wrapper zu überspringen
+    $page_full = false;
+    include $filePath;
+} else {
+    $page_full = false;
+    $filePath404 = __DIR__ . "/libary/errors/404.lib.php";
+    if (is_file($filePath404)) {
+        include $filePath404;
     } else {
-        include "lib/errors/404.php";
+        echo "<h2 class='text-xl font-semibold'>Seite nicht gefunden</h2>";
     }
-    ?>
-<?php require_once("includes/footer.php"); ?>
+}
+$content = ob_get_clean();
+
+if ($page_full !== true) {
+    echo "<section><article class='mt-5 bg-gray-50 p-10 rounded-xl border border-gray-200 shadow-sm'>";
+    echo $content;
+    echo "</article></section>";
+} else {
+    echo $content;
+}
+?>
+
+<?php require_once("assets/footer.php"); ?>
