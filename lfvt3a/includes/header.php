@@ -1,67 +1,70 @@
 <?php
-    ob_start();
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/session.php");
-    ini_set('display_errors', 1);
-    error_reporting(E_ALL);
-    require_once ($_SERVER['DOCUMENT_ROOT'] . "/includes/database.php");
+ob_start();
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/session.php");
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/database.php");
 ?>
 
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Praxisprojekt</title>
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://codevoyage.riftcore.de/4.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Highlight.js CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/default.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/highlight.min.js"></script>
-    <script>hljs.highlightAll();</script>
+    <link rel="stylesheet" href="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/styles/default.min.css">
+    <script src="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/highlight.min.js"></script>
+    <script>
+        hljs.highlightAll();
+    </script>
 
     <!--- Custom CSS -->
-    <link rel="stylesheet" href="../includes/style.css">
+    <link rel="stylesheet" href="/lfvt3a/includes/style.css">
 </head>
+
 <body>
 
-<!-- Navigation -->
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <!-- <a class="navbar-brand" href="#">Sven Oliver Berger</a> -->
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse p-2 my-2" id="navbarNav">
-            <ul class="navbar-nav">
-                <a class="nav-link" href="index.php?page=index">Startseite</a>
-                <?php if (!isset($_SESSION['user'])): ?>
-                    <a class="nav-link" href="index.php?page=login">Login</a>
-                <?php else: ?>
-                    <a class="nav-link" href="index.php?page=logout">Logout</a>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrationsbereich</a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="index.php?page=users">Benutzerverwaltung</a></li>
-                            <li><a class="dropdown-item" href="index.php?page=recording-list">Stempelzeiten anzeigen</a></li>
-                        </ul>
-                    </li>
-                <?php endif; ?>
-            </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <!-- <a class="navbar-brand" href="#">Sven Oliver Berger</a> -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse p-2 my-2" id="navbarNav">
+                <ul class="navbar-nav">
+                    <a class="nav-link" href="index.php?page=index">Startseite</a>
+                    <?php if (!isset($_SESSION['user'])): ?>
+                        <a class="nav-link" href="index.php?page=login">Login</a>
+                    <?php else: ?>
+                        <a class="nav-link" href="index.php?page=logout">Logout</a>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="" role="button" data-bs-toggle="dropdown" aria-expanded="false">Administrationsbereich</a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="index.php?page=users">Benutzerverwaltung</a></li>
+                                <li><a class="dropdown-item" href="index.php?page=recording-list">Stempelzeiten anzeigen</a></li>
+                            </ul>
+                        </li>
+                    <?php endif; ?>
+                </ul>
+            </div>
         </div>
-    </div>
-</nav>
+    </nav>
 
-<!-- Header -->
-<header class="bg-success text-white text-center py-5">
-    <div class="container">
-        <h1>LF12a - Kundenspezifische Anwendungsentwicklung durchführen</h1>
-        <p class="lead">Praxisprojekt: Zeiterfassungssystem</p>
-    </div>
-</header>
+    <!-- Header -->
+    <header class="bg-success text-white text-center py-5">
+        <div class="container">
+            <h1>LF12a - Kundenspezifische Anwendungsentwicklung durchführen</h1>
+            <p class="lead">Praxisprojekt: Zeiterfassungssystem</p>
+        </div>
+    </header>
 
-<!-- Hauptinhalt -->
-<main class="container border bg-light rounded shadow-sm my-3 py-3">
-<div class="p-2">
-    
+    <!-- Hauptinhalt -->
+    <main class="container border bg-light rounded shadow-sm my-3 py-3">
+        <div class="p-2">

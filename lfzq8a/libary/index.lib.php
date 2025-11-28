@@ -1,5 +1,5 @@
 <?php
-  $page_full = true;
+$page_full = true;
 ?>
 
 <!-- Abschnitt 1: Über uns / Unser Restaurant -->
@@ -7,7 +7,7 @@
   <div class="flex flex-col">
     <h2 class="border-b-2 border-gray-200 pb-2 font-extralight">Über uns</h2>
     <article class="mt-5 bg-gray-50 p-10 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow h-full">
-      <img src="/images/food.png" class="mb-10 border-6 border-amber-600 rounded">
+      <img src="/lfzq8a/images/food.png" class="mb-10 border-6 border-amber-600 rounded">
       <p>Jedes Gericht ist eine Geschichte – und meine erzählt von Wind über der Steppe und Wellen auf dem Meer. Ich glaube an wenige, ehrliche Zutaten, Respekt vor jedem Produkt und daran, dass Essen Menschen über Kulturen hinweg verbindet.</p>
     </article>
   </div>
@@ -19,7 +19,7 @@
       <p class="text-gray-700 leading-relaxed">Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt...</p>
       <h4 class="mt-2 text-lg font-semibold tracking-tight">Csed diam voluptua</h4>
       <p class="text-gray-700 leading-relaxed">At vero eos et accusam et justo duo dolores et ea rebum...</p>
-      
+
       <!-- Button unten andocken -->
       <a href=".." class="mt-auto inline-flex items-center gap-2 self-start rounded-md px-4 py-2 bg-amber-500 text-white transition-colors hover:bg-amber-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-amber-400">
         Mehr erfahren
@@ -32,7 +32,7 @@
 <!-- Abschnitt 2: Serviceleistungen -->
 <section>
   <h2 class="border-b-2 border-gray-200 pb-2 font-extralight">Unsere Serviceleistungen</h2>
-  <div class="grid gap-10 md:grid-cols-3 items-stretch">   <!-- items-stretch wichtig -->
+  <div class="grid gap-10 md:grid-cols-3 items-stretch"> <!-- items-stretch wichtig -->
     <article class="mt-5 bg-gray-50 p-10 rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-shadow h-full">
       <p>…</p>
     </article>
@@ -51,7 +51,7 @@
   <form class="mt-5 grid gap-4">
     <label for="name" class="font-medium">Name</label>
     <input id="name" name="name" type="text" required class="w-full border border-gray-300 bg-gray-50 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-amber-500">
-    
+
     <label for="email" class="font-medium">E-Mail</label>
     <input id="email" name="email" type="email" required class="w-full border border-gray-300 bg-gray-50 rounded-md p-2 focus:outline-none focus:ring-2 focus:ring-amber-500">
 

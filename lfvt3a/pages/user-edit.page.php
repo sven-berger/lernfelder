@@ -10,7 +10,7 @@ $sql = "SELECT * FROM user WHERE id = :id";
 $statement = $pdo->prepare($sql);
 $statement->execute(['id' => $id]);
 $user = $statement->fetch(PDO::FETCH_ASSOC);
-require_once ($_SERVER['DOCUMENT_ROOT'] . "/forms/user-edit.form.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/forms/user-edit.form.php");
 
 if (!$user) {
     die("Benutzer nicht gefunden.");
@@ -29,11 +29,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         'id' => $id
     ]);
 
-    header("Location: index.php?page=users");
+    header("Location: /lfvt3a/index.php?page=users");
     exit;
 }
-
-
-?>
-
-

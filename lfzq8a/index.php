@@ -1,4 +1,4 @@
-<?php require_once("assets/header.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lfzq8a/assets/header.php"); ?>
 
 <?php
 $page = $_GET['page'] ?? 'index';
@@ -29,4 +29,4 @@ if ($page_full !== true) {
 }
 ?>
 
-<?php require_once("assets/footer.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lfzq8a/assets/footer.php"); ?>
