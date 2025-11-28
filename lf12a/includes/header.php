@@ -1,9 +1,9 @@
 <?php
 ob_start();
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/session.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/session.php");
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
 ?>
 
 <!DOCTYPE html>
@@ -17,15 +17,8 @@ require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/database.php");
     <!-- Bootstrap CSS -->
     <link href="https://codevoyage.riftcore.de/4.0.0/assets/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Highlight.js CSS -->
-    <link rel="stylesheet" href="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/styles/default.min.css">
-    <script src="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/highlight.min.js"></script>
-    <script>
-        hljs.highlightAll();
-    </script>
-
     <!--- Custom CSS -->
-    <link rel="stylesheet" href="/lfvt3a/includes/style.css">
+    <link rel="stylesheet" href="/lf12a/includes/style.css">
 </head>
 
 <body>

@@ -16,7 +16,7 @@
   </div>
 
   <?php
-  require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/forms/recording-filter.form.php");
+  require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/forms/recording-filter.form.php");
   if (!isset($rows) || !is_array($rows)) {
     $rows = [];
   }
@@ -43,5 +43,5 @@
     </tbody>
   </table>
 <?php else: ?>
-  <?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/pages/login.page.php"); ?>
+  <?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/pages/login.page.php"); ?>
 <?php endif; ?>

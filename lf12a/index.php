@@ -1,4 +1,4 @@
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/header.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/header.php"); ?>
 
 <?php
 error_reporting(E_ALL);
@@ -13,12 +13,12 @@ if ($page === '') {
 }
 
 // Pfad zur Datei
-$filePath = $_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/pages/" . $page . ".page.php";
+$filePath = $_SERVER['DOCUMENT_ROOT'] . "/lf12a/pages/" . $page . ".page.php";
 if (file_exists($filePath)) {
     include $filePath;
 } else {
-    require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/404.php");
+    require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/404.php");
 }
 ?>
 
-<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/footer.php"); ?>
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/footer.php"); ?>

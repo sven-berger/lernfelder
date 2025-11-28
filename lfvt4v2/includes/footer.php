@@ -9,6 +9,16 @@
 </footer> -->
 
 <!-- Bootstrap JS -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://codevoyage.riftcore.de/4.0.0/assets/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- Highlight.js -->
+<link rel="stylesheet" href="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/styles/github.min.css">
+<script src="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/highlight.min.js"></script>
+<script src="https://codevoyage.riftcore.de/4.0.0/assets/highlightjs/languages/sql.min.js"></script>
+<script>
+    hljs.highlightAll();
+</script>
+
 </body>
+
 </html>

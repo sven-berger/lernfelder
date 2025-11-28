@@ -20,8 +20,8 @@ if (!isset($_SESSION['user_id'])) {
 }
 
 // --- Abhängigkeiten ---
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/database.php");
-require_once $_SERVER['DOCUMENT_ROOT'] . '/lfvt3a/includes/tcpdf/tcpdf.php';
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once $_SERVER['DOCUMENT_ROOT'] . '/lf12a/includes/tcpdf/tcpdf.php';
 
 // ---- Branding / Header/Footer ---------------------------------------------
 class PDF extends TCPDF

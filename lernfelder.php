@@ -16,14 +16,14 @@ $lernfelder = [
         'URL'          => "/lf11a/"
     ],
     [
-        'Lernfeld'     => "LF-VT3a",
-        'Beschreibung' => "Lorem Ipsum",
-        'URL'          => "/lfvt3a/"
-    ],
-    [
         'Lernfeld'     => "LF-VT4a",
         'Beschreibung' => "Lorem Ipsum",
-        'URL'          => "/lfvt4a/"
+        'URL'          => "/lfvt4v2/"
+    ],
+    [
+        'Lernfeld'     => "LF12a",
+        'Beschreibung' => "Lorem Ipsum",
+        'URL'          => "/lf12a/"
     ],
     [
         'Lernfeld'     => "LF-ZQ8a",

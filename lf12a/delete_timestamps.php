@@ -2,8 +2,8 @@
 
 declare(strict_types=1);
 
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/database.php");
-require_once($_SERVER['DOCUMENT_ROOT'] . "/lfvt3a/includes/session.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/database.php");
+require_once($_SERVER['DOCUMENT_ROOT'] . "/lf12a/includes/session.php");
 
 if (session_status() !== PHP_SESSION_ACTIVE) {
   session_start();
@@ -58,5 +58,5 @@ $q = [];
 if ($start) $q[] = 'start=' . urlencode($start);
 if ($end)   $q[] = 'end=' . urlencode($end);
 $q[] = 'deleted=' . $deleted;
-header('Location: /lfvt3a/index.php?page=index&' . implode('&', $q));
+header('Location: /lf12a/index.php?page=index&' . implode('&', $q));
 exit;
